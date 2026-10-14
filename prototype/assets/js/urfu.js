@@ -27,18 +27,72 @@
     if (e.key === 'Escape' && nav) { nav.classList.remove('is-open'); if (navToggle) navToggle.setAttribute('aria-expanded', 'false'); }
   });
 
-  /* ---- Language switch (visual demo; RU/EN) ---- */
+  /* ---- Theme toggle (light / dark) ---- */
+  var themeBtn = $('[data-theme-toggle]');
+  if (themeBtn) {
+    themeBtn.setAttribute('aria-pressed', document.documentElement.getAttribute('data-theme') === 'dark' ? 'true' : 'false');
+    on(themeBtn, 'click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      themeBtn.setAttribute('aria-pressed', next === 'dark' ? 'true' : 'false');
+      try { localStorage.setItem('urfu-theme', next); } catch (e) {}
+    });
+  }
+
+  /* ---- Language switch (RU ↔ EN via dictionary, works without reload) ---- */
+  var I18N = window.URFU_I18N || {};
+  var textOriginals = new WeakMap();
+  var attrOriginals = new WeakMap();
+  var ATTRS = ['placeholder', 'aria-label', 'title', 'alt'];
+  var originalTitle = document.title;
+
+  function translateTextNode(node, key, lang) {
+    var base = textOriginals.get(node);
+    if (lang === 'en' && I18N[key] !== undefined) {
+      node.nodeValue = base.replace(base.trim(), function () { return I18N[key]; });
+    } else {
+      node.nodeValue = base;
+    }
+  }
+  function applyLang(lang) {
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+    var n;
+    while ((n = walker.nextNode())) {
+      var raw = n.nodeValue, key = raw.replace(/\u00A0/g, ' ').trim();
+      if (!key) continue;
+      if (!textOriginals.has(n)) textOriginals.set(n, raw);
+      translateTextNode(n, key, lang);
+    }
+    $$('[placeholder],[aria-label],[title],[alt]').forEach(function (el) {
+      if (!attrOriginals.has(el)) attrOriginals.set(el, {});
+      var store = attrOriginals.get(el);
+      ATTRS.forEach(function (a) {
+        if (!el.hasAttribute(a)) return;
+        if (!(a in store)) store[a] = el.getAttribute(a);
+        var v = store[a], vk = v.replace(/\u00A0/g, ' ').trim();
+        el.setAttribute(a, lang === 'en' && I18N[vk] !== undefined ? I18N[vk] : v);
+      });
+    });
+    document.title = (lang === 'en' && I18N[originalTitle] !== undefined) ? I18N[originalTitle] : originalTitle;
+  }
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    $$('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false'); });
+    applyLang(lang);
+    try { localStorage.setItem('urfu-lang', lang); } catch (e) {}
+  }
   $$('.lang').forEach(function (group) {
     group.addEventListener('click', function (e) {
       var btn = e.target.closest('button'); if (!btn) return;
-      $$('button', group).forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
-      document.documentElement.lang = btn.dataset.lang || 'ru';
-      var note = $('[data-lang-note]');
-      if (note) note.textContent = btn.dataset.lang === 'en'
-        ? 'English is a demonstrative preview; the prototype content is primarily Russian.'
-        : '';
+      setLang(btn.dataset.lang || 'ru');
     });
   });
+  (function initLang() {
+    var lang = 'ru';
+    try { lang = localStorage.getItem('urfu-lang') || 'ru'; } catch (e) {}
+    try { var qp = new URLSearchParams(location.search).get('lang'); if (qp === 'en' || qp === 'ru') lang = qp; } catch (e) {}
+    if (lang === 'en') setLang('en');
+  })();
 
   /* ---- Tabs ---- */
   $$('[role="tablist"]').forEach(function (list) {
