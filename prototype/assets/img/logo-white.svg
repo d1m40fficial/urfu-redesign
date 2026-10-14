@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="248" height="48" viewBox="0 0 248 48" role="img" aria-label="УрФУ — Уральский федеральный университет">
+  <rect x="2" y="2" width="44" height="44" rx="11" fill="#ffffff"/>
+  <path d="M13 13 L22.5 26 L32 13" fill="none" stroke="#0C3A72" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22.5 26 L22.5 32" stroke="#0C3A72" stroke-width="4.4" stroke-linecap="round"/>
+  <circle cx="22.5" cy="35.5" r="3.3" fill="#F5A623"/>
+  <line x1="60" y1="10" x2="60" y2="38" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1.5"/>
+  <text x="76" y="27" font-family="Onest, 'Golos Text', Arial, sans-serif" font-size="23" font-weight="800" letter-spacing="-0.5" fill="#ffffff">УрФУ</text>
+  <text x="76" y="40" font-family="'Golos Text', Arial, sans-serif" font-size="8.7" letter-spacing="0.4" fill="#B9C7DE">Уральский федеральный университет</text>
+</svg>
