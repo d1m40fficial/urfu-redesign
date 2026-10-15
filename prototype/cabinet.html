@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Личный кабинет студента — УрФУ</title>
+<meta name="description" content="Личный кабинет студента УрФУ: расписание, баллы БРС, проекты, документы, платежи и поддержка в одном месте.">
+<link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/urfu.css">
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var q=new URLSearchParams(location.search);var t=q.get("theme")||localStorage.getItem("urfu-theme");if(t!=="dark"&&t!=="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}d.setAttribute("data-theme",t);}catch(e){d.setAttribute("data-theme","light");}})();</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<header class="header">
+  <div class="utility">
+    <div class="container-wide">
+      <div class="utility__left">
+        <span>ФГАОУ ВО «УрФУ имени первого Президента России Б.Н. Ельцина»</span>
+        <a href="about.html">Об университете</a>
+      </div>
+      <div class="utility__links">
+        <a href="contacts.html">Контакты</a>
+        <a href="cabinet.html" aria-current="page">Личный кабинет</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Тёмная тема">
+          <svg class="i-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+          <svg class="i-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <span class="lang" role="group" aria-label="Язык интерфейса">
+          <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="masthead">
+    <div class="container-wide">
+      <a class="brand" href="index.html" aria-label="УрФУ — на главную">
+        <svg class="brand__mark" viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="hL" gradientUnits="userSpaceOnUse" x1="27" y1="38" x2="54" y2="77"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F5333F"/></linearGradient><linearGradient id="hR" gradientUnits="userSpaceOnUse" x1="93" y1="31" x2="62" y2="77"><stop offset="0" stop-color="#7CB0FF"/><stop offset="1" stop-color="#F5333F"/></linearGradient><linearGradient id="hB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E6007E"/><stop offset="1" stop-color="#FFD400"/></linearGradient></defs><rect width="120" height="120" rx="26" fill="#0F284D"/><g fill="none" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M93 31 L62 77" stroke="url(#hR)"/><path d="M27 38 L54 77" stroke="url(#hL)"/><path d="M54 88 L41 108" stroke="url(#hB)"/></g></svg>
+        <span class="brand__text"><span class="brand__name">УрФУ</span><span class="brand__sub">имени первого Президента России Б.Н. Ельцина</span></span>
+      </a>
+      <button class="icon-btn nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Открыть меню">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li class="nav__item" data-mega>
+            <a class="nav__link" href="admissions.html">Поступить
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+            <div class="mega">
+              <div class="mega__grid">
+                <div class="mega__group"><h4>Выбрать</h4><ul>
+                  <li><a href="programs.html">Программы бакалавриата</a></li>
+                  <li><a href="programs.html">Программы магистратуры</a></li>
+                  <li><a href="about.html">Направления подготовки</a></li>
+                  <li><a href="admissions.html">Стоимость обучения</a></li>
+                </ul></div>
+                <div class="mega__group"><h4>Как поступить</h4><ul>
+                  <li><a href="admissions.html">Шаги приёма</a></li>
+                  <li><a href="admissions.html">Сроки и даты</a></li>
+                  <li><a href="admissions.html">Документы</a></li>
+                  <li><a href="admissions.html">Через Госуслуги</a></li>
+                </ul></div>
+              </div>
+              <div class="mega__foot"><a href="events.html">Дни открытых дверей</a><a href="admissions.html">Иностранным абитуриентам</a><a href="contacts.html">Приёмная комиссия</a></div>
+            </div>
+          </li>
+          <li class="nav__item" data-mega>
+            <a class="nav__link" href="programs.html">Образование
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+            <div class="mega">
+              <div class="mega__grid">
+                <div class="mega__group"><h4>Уровни</h4><ul>
+                  <li><a href="programs.html">Базовое высшее</a></li>
+                  <li><a href="programs.html">Специализированное высшее</a></li>
+                  <li><a href="programs.html">Магистратура</a></li>
+                  <li><a href="programs.html">Аспирантура</a></li>
+                  <li><a href="programs.html">Дополнительное образование</a></li>
+                </ul></div>
+                <div class="mega__group"><h4>Институты</h4><ul>
+                  <li><a href="institute.html">Институты и школы</a></li>
+                  <li><a href="institute.html">Учебные программы</a></li>
+                  <li><a href="students.html">Онлайн-курсы</a></li>
+                  <li><a href="about.html">Библиотека</a></li>
+                </ul></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="institute.html">Наука</a></li>
+          <li class="nav__item" data-mega>
+            <a class="nav__link" href="students.html" aria-current="page">Студентам
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+            <div class="mega">
+              <div class="mega__grid">
+                <div class="mega__group"><h4>Учёба</h4><ul>
+                  <li><a href="cabinet.html">Расписание занятий</a></li>
+                  <li><a href="cabinet.html">Рейтинг БРС</a></li>
+                  <li><a href="students.html">Сессия и зачёты</a></li>
+                </ul></div>
+                <div class="mega__group"><h4>Сервисы и поддержка</h4><ul>
+                  <li><a href="students.html">Стипендии</a></li>
+                  <li><a href="students.html">Общежитие и питание</a></li>
+                  <li><a href="students.html">Меры поддержки</a></li>
+                  <li><a href="contacts.html">Помощь и контакты</a></li>
+                </ul></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav__item" data-mega>
+            <a class="nav__link" href="about.html">Университет
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+            <div class="mega">
+              <div class="mega__grid">
+                <div class="mega__group"><h4>О нас</h4><ul>
+                  <li><a href="about.html">Об УрФУ</a></li>
+                  <li><a href="about.html">УрФУ в цифрах</a></li>
+                  <li><a href="about.html">Кампус</a></li>
+                  <li><a href="about.html">Устойчивое развитие</a></li>
+                </ul></div>
+                <div class="mega__group"><h4>Медиа</h4><ul>
+                  <li><a href="news.html">Новости</a></li>
+                  <li><a href="events.html">События</a></li>
+                  <li><a href="contacts.html">Пресс-служба</a></li>
+                </ul></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="masthead__actions">
+        <a class="icon-btn" href="search.html" aria-label="Поиск по сайту">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </a>
+        <a class="btn" href="admissions.html">Как поступить</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <nav class="container-wide" aria-label="Хлебные крошки"><ol class="breadcrumb"><li><a href="index.html">Главная</a></li><li><a href="students.html">Студентам</a></li><li aria-current="page">Личный кабинет</li></ol></nav>
+
+  <section class="pagehead">
+    <div class="container-wide">
+      <div class="pagehead__grid">
+        <div>
+          <span class="label">Личный кабинет · образец</span>
+          <h1 class="display mt-lg" style="font-size: clamp(2rem, 1.4rem + 2.6vw, 3rem)">Личный кабинет студента</h1>
+          <p class="lead mt-lg prose">Один вход ко всем учебным сервисам: расписание, баллы БРС, проекты, документы, платежи и поддержка. Данные на странице — образец.</p>
+          <div class="hero__cta"><a class="btn" href="#">Войти в кабинет</a><a class="btn btn--ghost" href="students.html">Раздел «Студентам»</a></div>
+        </div>
+        <dl class="factbox" aria-label="Профиль студента (образец)">
+          <div class="factbox__row"><dt>Студент</dt><dd>Иванова А. С.</dd></div>
+          <div class="factbox__row"><dt>Группа</dt><dd class="mono">РИ-210002</dd></div>
+          <div class="factbox__row"><dt>Курс</dt><dd>4 курс</dd></div>
+          <div class="factbox__row"><dt>Институт</dt><dd>Радиоэлектроники и ИТ</dd></div>
+          <div class="factbox__row"><dt>Оплата</dt><dd>Бюджет</dd></div>
+          <div class="factbox__row"><dt>Семестр</dt><dd>Осенний 2026/27</dd></div>
+          <div class="factbox__row"><dt>Средний балл</dt><dd class="mono">4.7</dd></div>
+          <div class="factbox__row"><dt>Стипендия</dt><dd>Академическая</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" aria-labelledby="rec-h">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__text"><span class="label">Начните здесь</span><h2 id="rec-h">Мы вам рекомендуем</h2><p>Семь сервисов, которые нужны в первую неделю семестра.</p></div>
+        <span class="badge-open">Образец данных</span>
+      </div>
+      <div class="grid grid-3 reveal">
+        <a class="card" href="#"><div class="card__body"><span class="card__meta"><span class="tag">Кампус</span><span class="tag tag--neutral">Внешний</span></span><span class="card__title">Получение учётной записи</span><span class="card__text">Учётная запись единого каталога университета at.urfu.ru.</span></div></a>
+        <a class="card" href="#"><div class="card__body"><span class="card__meta"><span class="tag">Учёба</span></span><span class="card__title">Баллы БРС</span><span class="card__text">Баллы по текущей и промежуточной аттестациям.</span></div></a>
+        <a class="card" href="#"><div class="card__body"><span class="card__meta"><span class="tag">Учёба</span></span><span class="card__title">Расписание занятий</span><span class="card__text">Синхронизация в формате iCalendar, ссылки на виртуальные комнаты и трансляции.</span></div></a>
+        <a class="card" href="#"><div class="card__body"><span class="card__meta"><span class="tag">Учёба</span></span><span class="card__title">Проектное обучение</span><span class="card__text">Выбор проектов и запись в команды.</span></div></a>
+        <a class="card" href="#"><div class="card__body"><span class="card__meta"><span class="tag">Учёба</span><span class="tag tag--neutral">Внешний</span></span><span class="card__title">Проектное обучение TeamProject</span><span class="card__text">Отслеживание активности студента в проекте.</span></div></a>
+        <a class="card" href="#"><div class="card__body"><span class="card__meta"><span class="tag">Учёба</span></span><span class="card__title">Выбор секции ФК</span><span class="card__text">Выбор секции физической культуры.</span></div></a>
+        <a class="card" href="#"><div class="card__body"><span class="card__meta"><span class="tag">Учёба</span><span class="tag tag--neutral">Внешний</span></span><span class="card__title">Система электронного обучения eLearn</span><span class="card__text">Портал электронного обучения на базе Moodle и BigBlueButton.</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--canvas section--rule" aria-labelledby="cat-h">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__text"><span class="label">Категории</span><h2 id="cat-h">Категории сервисов</h2><p>Выберите направление — сервисы сгруппированы по задачам, а не по подразделениям.</p></div>
+      </div>
+      <div class="grid grid-3 reveal">
+        <a class="card" href="#cat-ucheba"><div class="card__body"><span class="card__title">Учёба</span><span class="card__text">Учебный процесс, дисциплины по выбору, практики и зачётная книжка.</span><span class="link-arrow mt-lg">Сервисы <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+        <a class="card" href="#cat-nauka"><div class="card__body"><span class="card__title">Наука</span><span class="card__text">Научные материалы и библиотечные ресурсы для обучения.</span><span class="link-arrow mt-lg">Сервисы <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+        <a class="card" href="#cat-life"><div class="card__body"><span class="card__title">Внеучебная жизнь</span><span class="card__text">Развитие за пределами учебной программы.</span><span class="link-arrow mt-lg">Сервисы <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+        <a class="card" href="#cat-campus"><div class="card__body"><span class="card__title">Кампус</span><span class="card__text">Общежитие, ИТ-сервисы и поддержка на территории кампуса.</span><span class="link-arrow mt-lg">Сервисы <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+        <a class="card" href="#cat-docs"><div class="card__body"><span class="card__title">Документы и финансы</span><span class="card__text">Справки, платежи, задолженности и электронная подпись.</span><span class="link-arrow mt-lg">Сервисы <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+        <a class="card" href="#cat-portfolio"><div class="card__body"><span class="card__title">Портфолио</span><span class="card__text">Сервисы для подготовки портфолио и рейтинга.</span><span class="link-arrow mt-lg">Сервисы <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper section--rule" aria-labelledby="dir-h">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__text"><span class="label">Каталог</span><h2 id="dir-h">Все сервисы</h2><p>Сервисы собраны в шесть категорий. Данные приведены как образец.</p></div>
+      </div>
+      <div class="split">
+        <nav class="anchor-nav" aria-label="Категории сервисов">
+          <a href="#cat-ucheba">Учёба</a>
+          <a href="#cat-nauka">Наука</a>
+          <a href="#cat-life">Внеучебная жизнь</a>
+          <a href="#cat-campus">Кампус</a>
+          <a href="#cat-docs">Документы и финансы</a>
+          <a href="#cat-portfolio">Портфолио</a>
+        </nav>
+        <div>
+          <section class="dir-section" id="cat-ucheba" aria-labelledby="cat-ucheba-h">
+            <div class="dir-head"><h3 id="cat-ucheba-h">Учёба</h3><span class="tag tag--neutral mono">26</span></div>
+            <ul class="dir-list">
+              <li><a href="#">Сервис информирования о баллах БРС</a></li>
+              <li><a href="#">Расписание занятий</a></li>
+              <li><a href="#">Проектное обучение</a></li>
+              <li><a href="#">Проектное обучение TeamProject</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Учебный план</a></li>
+              <li><a href="#">Зачётная книжка</a></li>
+              <li><a href="#">Экзаменационный лист</a></li>
+              <li><a href="#">Запись на мероприятия НТК</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Курсовое проектирование</a></li>
+              <li><a href="#">Выпускная квалификационная работа</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Выбор секции ФК</a></li>
+              <li><a href="#">Выбор модуля иностранного языка</a></li>
+              <li><a href="#">Дисциплины по выбору</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Выбор майнора</a></li>
+              <li><a href="#">Индивидуальная траектория студента</a></li>
+              <li><a href="#">Опросы и вакансии</a></li>
+              <li><a href="#">Цифровая кафедра УрФУ</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Учебная и производственная практики</a></li>
+              <li><a href="#">Модеус</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">ГИПЕРМЕТОД</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Система электронного обучения eLearn</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Электронные библиотечные системы (ЭБС)</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Онлайн-курсы на openedu.ru</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Выборка первых 10 % студентов института</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Портал информационно-образовательных ресурсов</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Дополнительное образование, курсы, тренинги</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+            </ul>
+          </section>
+
+          <section class="dir-section" id="cat-nauka" aria-labelledby="cat-nauka-h">
+            <div class="dir-head"><h3 id="cat-nauka-h">Наука</h3><span class="tag tag--neutral mono">10</span></div>
+            <ul class="dir-list">
+              <li><a href="#">Портал молодёжной науки</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Электронные ресурсы по подписке</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Заказ литературы из электронного каталога</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Электронный каталог</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Электронные библиотечные системы (ЭБС)</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Электронные ресурсы свободного доступа</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Электронный архив</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Учёт научных достижений</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Научная академическая мобильность</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Портал научных мероприятий</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+            </ul>
+          </section>
+
+          <section class="dir-section" id="cat-life" aria-labelledby="cat-life-h">
+            <div class="dir-head"><h3 id="cat-life-h">Внеучебная жизнь</h3><span class="tag tag--neutral mono">4</span></div>
+            <ul class="dir-list">
+              <li><a href="#">Центр взаимодействия с работодателями</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Рейтинг внеучебной деятельности студентов</a></li>
+              <li><a href="#">Ежегодная премия «Студент года»</a></li>
+              <li><a href="#">Глазами студентов</a></li>
+            </ul>
+          </section>
+
+          <section class="dir-section" id="cat-campus" aria-labelledby="cat-campus-h">
+            <div class="dir-head"><h3 id="cat-campus-h">Кампус</h3><span class="tag tag--neutral mono">7</span></div>
+            <ul class="dir-list">
+              <li><a href="#">Получение учётной записи</a><span class="ext" title="Внешний сервис"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span></li>
+              <li><a href="#">Запрос в техподдержку ИТ-сервисов</a></li>
+              <li><a href="#">Office 365 и Teams</a></li>
+              <li><a href="#">Поселение в общежитие</a></li>
+              <li><a href="#">Интернет в общежитиях</a></li>
+              <li><a href="#">Сервис видеоконференций BigBlueButton</a></li>
+              <li><a href="#">Действия при режиме «Беспилотная опасность»</a></li>
+            </ul>
+          </section>
+
+          <section class="dir-section" id="cat-docs" aria-labelledby="cat-docs-h">
+            <div class="dir-head"><h3 id="cat-docs-h">Документы и финансы</h3><span class="tag tag--neutral mono">9</span></div>
+            <ul class="dir-list">
+              <li><a href="#">Согласие на обработку персональных данных</a></li>
+              <li><a href="#">Платежи и задолженности</a></li>
+              <li><a href="#">Финансовые сервисы</a></li>
+              <li><a href="#">Заказ справок</a></li>
+              <li><a href="#">Простая электронная подпись</a></li>
+              <li><a href="#">Целевой капитал на развитие УрФУ</a></li>
+              <li><a href="#">Формы документов для студентов</a></li>
+              <li><a href="#">Файлы</a></li>
+              <li><a href="#">Воинский учёт</a></li>
+            </ul>
+          </section>
+
+          <section class="dir-section" id="cat-portfolio" aria-labelledby="cat-portfolio-h">
+            <div class="dir-head"><h3 id="cat-portfolio-h">Портфолио</h3><span class="tag tag--neutral mono">10</span></div>
+            <ul class="dir-list">
+              <li><a href="#">Сервис информирования о баллах БРС</a></li>
+              <li><a href="#">Зачётная книжка</a></li>
+              <li><a href="#">Рейтинг внеучебной деятельности студентов</a></li>
+              <li><a href="#">Выборка первых 10 % студентов института</a></li>
+              <li><a href="#">Учебная и производственная практики</a></li>
+              <li><a href="#">Курсовое проектирование</a></li>
+              <li><a href="#">Общий рейтинг студента</a></li>
+              <li><a href="#">Портал молодёжной науки</a></li>
+              <li><a href="#">Проектное обучение</a></li>
+              <li><a href="#">Точка кипения УрФУ (Leader-ID)</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink section--tight" aria-labelledby="help-h">
+    <div class="container">
+      <div class="section-head" style="margin-bottom:0">
+        <div class="section-head__text"><span class="label">Поддержка</span><h2 id="help-h">Если нужна помощь</h2><p>Учебный офис, техподдержка ИТ-сервисов и контакт-центр помогут с доступом и учебными вопросами.</p></div>
+        <a class="btn btn--on-ink" href="contacts.html">Все контакты</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container-wide">
+    <div class="footer__top">
+      <div>
+        <a class="brand" href="index.html" aria-label="УрФУ — на главную">
+          <svg class="brand__mark" viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="fL" gradientUnits="userSpaceOnUse" x1="27" y1="38" x2="54" y2="77"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F5333F"/></linearGradient><linearGradient id="fR" gradientUnits="userSpaceOnUse" x1="93" y1="31" x2="62" y2="77"><stop offset="0" stop-color="#7CB0FF"/><stop offset="1" stop-color="#F5333F"/></linearGradient><linearGradient id="fB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E6007E"/><stop offset="1" stop-color="#FFD400"/></linearGradient></defs><rect width="120" height="120" rx="26" fill="#0F284D"/><rect x="1" y="1" width="118" height="118" rx="25" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="2"/><g fill="none" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path d="M93 31 L62 77" stroke="url(#fR)"/><path d="M27 38 L54 77" stroke="url(#fL)"/><path d="M54 88 L41 108" stroke="url(#fB)"/></g></svg>
+          <span class="brand__text"><span class="brand__name">УрФУ</span><span class="brand__sub">имени первого Президента России Б.Н. Ельцина</span></span>
+        </a>
+        <p class="footer__sample">Макет редизайна. Данные, названия и показатели приведены как образец. Логотип — предложение проекта.</p>
+      </div>
+      <div>
+        <h4>Поступить</h4>
+        <ul><li><a href="admissions.html">Как поступить</a></li><li><a href="programs.html">Программы</a></li><li><a href="admissions.html">Сроки и стоимость</a></li><li><a href="events.html">Дни открытых дверей</a></li></ul>
+      </div>
+      <div>
+        <h4>Университет</h4>
+        <ul><li><a href="about.html">Об УрФУ</a></li><li><a href="institute.html">Институты</a></li><li><a href="news.html">Новости</a></li><li><a href="events.html">События</a></li></ul>
+      </div>
+      <div>
+        <h4>Контакт-центр</h4>
+        <p class="footer__phone">8-800-100-50-44</p>
+        <p class="small">Звонок по России бесплатный</p>
+        <p class="small mt-lg"><a href="mailto:contact@urfu.ru">contact@urfu.ru</a></p>
+        <ul class="mt-lg"><li><a href="contacts.html">Все контакты</a></li><li><a href="search.html">Поиск по сайту</a></li><li><a href="cabinet.html">Личный кабинет</a></li></ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> ФГАОУ ВО «УрФУ имени первого Президента России Б.Н. Ельцина». Демонстрационный прототип.</span>
+      <span><a href="contacts.html">Обратная связь</a> · <a href="search.html">Карта сайта</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/urfu.js" defer></script>
+</body>
+</html>
