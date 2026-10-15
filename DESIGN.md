@@ -119,9 +119,9 @@ bands). Секции разделяются линией, инверсией п�
 
 **Ассеты и лицензии.**
 - Логотип: **оригинал проекта** (`agent-proposed-greenfield-decision`) —
-  минималистичный монограмм из скрещённых Y и V (широкая «V» + вложенная «Y» с
-  нисходящей ножкой). `assets/img/logo.svg`, mark `logo-mark.svg`, инверсная
-  версия `logo-white.svg`.
+  знак-«галочка» (V + нижняя ножка-продолжение) с градиентами палитры оригинала:
+  левая линия белый→красный, правая голубой→красный, нижняя малиновый→жёлтый.
+  `assets/img/logo.svg`, mark `logo-mark.svg`, инверсная версия `logo-white.svg`.
 - Шрифты: Onest, Golos Text, JetBrains Mono — SIL Open Font License 1.1, отдаются
   через Google Fonts CDN.
 - Иконки: один набор — inline SVG, штрих `1.75`, `currentColor`. Библиотека и

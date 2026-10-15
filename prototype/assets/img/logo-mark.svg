@@ -1,8 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" role="img" aria-label="УрФУ">
-  <rect width="44" height="44" rx="11" fill="#0F284D"/>
-  <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M11 12 L22 30 L33 12"/>
-    <path d="M14.5 12 L22 21 L29.5 12"/>
-    <path d="M22 21 L22 37"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 120 120" role="img" aria-label="УрФУ">
+  <defs>
+    <linearGradient id="mL" gradientUnits="userSpaceOnUse" x1="27" y1="38" x2="54" y2="77"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F5333F"/></linearGradient>
+    <linearGradient id="mR" gradientUnits="userSpaceOnUse" x1="93" y1="31" x2="62" y2="77"><stop offset="0" stop-color="#7CB0FF"/><stop offset="1" stop-color="#F5333F"/></linearGradient>
+    <linearGradient id="mB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E6007E"/><stop offset="1" stop-color="#FFD400"/></linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="26" fill="#0F284D"/>
+  <g fill="none" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M93 31 L62 77" stroke="url(#mR)"/>
+    <path d="M27 38 L54 77" stroke="url(#mL)"/>
+    <path d="M54 88 L41 108" stroke="url(#mB)"/>
   </g>
 </svg>
