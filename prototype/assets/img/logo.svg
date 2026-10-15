@@ -6,7 +6,7 @@
   </defs>
   <g transform="translate(2 2) scale(0.3666667)">
     <rect width="120" height="120" rx="26" fill="#0F284D"/>
-    <g fill="none" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <g fill="none" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
       <path d="M93 31 L62 77" stroke="url(#gR)"/>
       <path d="M27 38 L54 77" stroke="url(#gL)"/>
       <path d="M54 88 L41 108" stroke="url(#gB)"/>
