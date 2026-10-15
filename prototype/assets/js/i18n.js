@@ -440,6 +440,7 @@ window.URFU_I18N = {
   "УрФУ — крупнейший федеральный университет на границе Европы и Азии. Мы соединяем классическое образование, инженерную школу и исследования мирового уровня. Данные — образец.": "UrFU is the largest federal university on the border of Europe and Asia. We combine a classical education, an engineering school and world-class research. Sample data.",
   "УрФУ — это не только аудитории. Кампус на границе Европы и Азии объединяет общежития, лаборатории, спортивные комплексы и творческие студии в единую среду.": "UrFU is more than lecture halls. On the border of Europe and Asia, the campus unites dormitories, laboratories, sports facilities and creative studios into a single environment.",
   "Уральский федеральный университет": "Ural Federal University",
+  "имени первого Президента России Б.Н. Ельцина": "named after the first President of Russia, B. N. Yeltsin",
   "Уровень": "Level",
   "Уровни": "Levels",
   "Устойчивое развитие": "Sustainability",
